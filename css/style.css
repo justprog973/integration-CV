@@ -1,46 +1,70 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html
+{
+    height: 100%;
 }
 body
 {
+    min-height: 100%;
     background:grey;
+    font-family: 'Arvo', serif;
 }
 
-.container
+.container-header
 {
     width: 90%;
+    max-width: 1200px;
     margin: auto;
 }
 
 header
-{ 
+{
     width: 100%;
-    font-family:  Georgia ,SansSerif;
     color: white;
     height: 360px;
     padding: 20px;
     background-image: url("../media/pictures/header/banniere.png");
     background-size: cover;
     background-position: center;
-    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+            box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+    border-bottom:solid 6px #333333;
 }
 .content-logo
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    height: 210px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 230px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .round
 {
     height: 110px;
     width: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: honeydew;
     border-radius: 50% ;
 }
@@ -60,6 +84,8 @@ header
     padding: 10px;
     font-weight: bold;
     border-radius: 20px;
+    -webkit-transition:  1s ease;
+    transition:  1s ease;
 }
 .download p
 {
@@ -68,7 +94,8 @@ header
 .download:hover
 {
     background-color: rgba(255,255,255,1);
-    transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease;
+    transition: background-color 1s ease;
 }
 a
 {
@@ -77,11 +104,16 @@ a
 }
 .content-present {
     width: 100%;
-    height: 95px;
+    height: 75px;
     padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between
 }
 .content-present
 {
@@ -103,17 +135,22 @@ a
 }
 .left p:first-child:before
 {
-    background-image: url("../media/pictures/icons/placeholder.svg");
+    background-image: url("../media/pictures/icon/placeholder.svg");
 }
 .left p:last-child:before
 {
-    background-image: url("../media/pictures/icons/telephone.svg");
+    background-image: url("../media/pictures/icon/telephone.svg");
 }
 
 .right
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .right a:first-child
 {
@@ -131,16 +168,250 @@ a
 }
 .right a:first-child:before
 {
-    background-image: url("../media/pictures/icons/arroba.svg");
+    background-image: url("../media/pictures/icon/arroba.svg");
 }
 .right a:last-child:before
 {
-    background-image: url("../media/pictures/icons/link.svg");
+    background-image: url("../media/pictures/icon/link.svg");
 }
 
 .main
 {
     width: 100%;
     background-color: whitesmoke;
-    height: 100vh;
+    padding: 20px;
+    border-bottom: #333333 solid 20px;
+}
+.container-main
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around ;
+    height: 100%;
+}
+h2
+{
+    border: 3px solid darkgray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 400px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 30px;
+    padding: 5px;
+}
+.title
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.about p
+{
+    width: 500px;
+    padding: 20px;
+}
+.software
+{
+    padding: 20px;
+}
+.skill section
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.software article
+{
+    border-left: 3px solid #5d5e93 ;
+}
+.software article p
+{
+    font-size: 18px;
+    padding: 5px 5px 5px 0;
+}
+.software article p:before
+{
+    content: '';
+    display : inline-block;
+    height : 0;
+    width : 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-top : 3px solid transparent;
+    border-bottom : 2px solid transparent;
+    border-left : 5px solid #5d5e93;
+}
+
+.language article p:before
+{
+    content: '';
+    display : inline-block;
+    height : 0;
+    width : 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-top : 3px solid transparent;
+    border-bottom : 2px solid transparent;
+    border-left : 5px solid #5d5e93;
+}
+
+.language article p
+{
+    font-size: 18px;
+    padding: 5px 5px 5px 0;
+}
+.language article
+{
+    border-left: 3px solid #5d5e93 ;
+}
+.language
+{
+    padding: 20px;
+}
+.container-experience
+{
+    padding: 20px;
+}
+.date
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+.post
+{
+    font-size: 18px;
+}
+.description
+{
+    width: 400px;
+}
+.company
+{
+    color: grey;
+    font-size: 18px;
+}
+.container-experience section
+{
+    border-left: 3px solid #0dae8e;
+}
+.date:before
+{
+    content: '';
+    display : inline-block;
+    height : 0;
+    width : 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-top : 3px solid transparent;
+    border-bottom : 2px solid transparent;
+    border-left : 5px solid #0dae8e;
+}
+.container-experience section article p:last-child
+{
+    margin-bottom: 5px;
+}
+.container-experience section article:last-child p:last-child
+{
+    margin-bottom: 0px;
+}
+.container-experience section article p
+{
+    margin-left: 12px;
+}
+.container-experience section article p:first-child
+{
+    margin-left: 0px;
+}
+
+.contain-interest
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.contain-interest div
+{
+    height: 100px;
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: grey 3px solid;
+    border-radius: 50%;
+    margin-top: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.contain-formation
+{
+    padding: 20px;
+    width: 500px;
+}
+.contain-formation section
+{
+    border-left: 3px solid #0dae8e ;
+}
+.contain-formation section .description
+{
+    margin-left: 20px;
+    margin-bottom: 10px ;
+}
+.contain-formation section .description:last-child
+{
+    margin-bottom: 10px ;
+}
+.contain-formation section .description p
+{
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1002px){
+    header
+    {
+        height: 400px;
+    }
+    .content-present .right
+    {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 554px){
+
+    .container-header
+    {
+        width: 100%;
+    }
 }
